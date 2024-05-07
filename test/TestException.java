@@ -1,5 +1,5 @@
-import models.FiguraGeometrica;
-import controller.FabricaFiguraGeometrica;
+import formas_geometricas.FiguraGeometrica;
+import fabrica.FabricaFiguraGeometrica;
 import exceptions.ExceptionValorNegativoOuZero;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertThrows;

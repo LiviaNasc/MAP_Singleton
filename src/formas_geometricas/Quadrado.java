@@ -1,4 +1,4 @@
-package models;
+package formas_geometricas;
 
 import exceptions.ExceptionValorNegativoOuZero;
 

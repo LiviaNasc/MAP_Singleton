@@ -1,71 +1,89 @@
 package main;
 
-import models.FiguraGeometrica;
-import controller.FabricaFiguraGeometrica;
+import formas_geometricas.FiguraGeometrica;
+import fabrica.FabricaFiguraGeometrica;
 import exceptions.ExceptionValorNegativoOuZero;
 
 public class Main{
-    static FiguraGeometrica equilatero;
-    static FiguraGeometrica isosceles;
-    static FiguraGeometrica escaleno;
-    static FiguraGeometrica circulo;
-    static FiguraGeometrica quadrado1;
-    static FiguraGeometrica quadrado2;
-    static FiguraGeometrica quadrado3;
-    static FiguraGeometrica quadrado4;
 
     public static void main(String[] args) throws ExceptionValorNegativoOuZero {
-
-        equilatero = FabricaFiguraGeometrica.getTriangulo(10, 10, 10);
-        isosceles = FabricaFiguraGeometrica.getTriangulo(10, 10, 6);
-        escaleno = FabricaFiguraGeometrica.getTriangulo(3, 4, 5);
-
-        circulo = FabricaFiguraGeometrica.getCirculo(5);
-
-        quadrado1 = FabricaFiguraGeometrica.getQuadrado(4);
-        quadrado2 = FabricaFiguraGeometrica.getQuadrado(5);
-        quadrado3 = FabricaFiguraGeometrica.getQuadrado(8);
-        quadrado4 = FabricaFiguraGeometrica.getQuadrado(10);
-
-        System.out.println("--------------CÍRCULO--------------");
-
-        System.out.println("\n" + circulo);
+        System.out.println("---------------CÍRCULO---------------");
+        System.out.println("Criando primeiro Círculo de raio 5");
+        FiguraGeometrica circulo = FabricaFiguraGeometrica.getCirculo(5);
+        System.out.println(circulo);
         System.out.printf("Área: %.2f\n", circulo.getArea());
         System.out.printf("Perímetro: %.2f\n", circulo.getPerimetro());
 
+        System.out.println("\nCriando segundo Círculo de raio 10");
+        circulo = FabricaFiguraGeometrica.getCirculo(10);
+        System.out.println(circulo);
+        System.out.printf("Área: %.2f\n", circulo.getArea());
+        System.out.printf("Perímetro: %.2f\n", circulo.getPerimetro());
 
-        System.out.println("\n--------------TRIÂNGULO--------------");
+        System.out.println("\n---------------TRIÂNGULOS---------------");
 
-        System.out.println("\n" + equilatero);
+        System.out.println("Criando primeiro Triangulo equilátero de lados 10, 10, 10");
+        FiguraGeometrica equilatero = FabricaFiguraGeometrica.getTriangulo(10, 10, 10);
+        System.out.println(equilatero);
         System.out.printf("Área: %.2f\n", equilatero.getArea());
         System.out.printf("Perímetro: %.2f\n", equilatero.getPerimetro());
 
-        System.out.println("\n" + isosceles);
+        System.out.println("\nCriando segundo Triangulo equilátero de lados 20, 20, 20");
+        equilatero = FabricaFiguraGeometrica.getTriangulo(20, 20, 20);
+        System.out.println(equilatero);
+        System.out.printf("Área: %.2f\n", equilatero.getArea());
+        System.out.printf("Perímetro: %.2f\n", equilatero.getPerimetro());
+
+        System.out.println("\nCriando primeiro Triangulo isoceles de lados 10, 10, 6");
+        FiguraGeometrica isosceles = FabricaFiguraGeometrica.getTriangulo(10, 10, 6);
+        System.out.println(isosceles);
         System.out.printf("Área: %.2f\n", isosceles.getArea());
         System.out.printf("Perímetro: %.2f\n", isosceles.getPerimetro());
 
-        System.out.println("\n" + escaleno);
-        System.out.printf("Área: %.2f\n", escaleno.getArea());
-        System.out.printf("Perímetro: %.2f\n", escaleno.getPerimetro());
+        System.out.println("\nCriando segundo Triangulo isoceles de lados 20, 20, 12");
+        isosceles = FabricaFiguraGeometrica.getTriangulo(10, 10, 12);
+        System.out.println(isosceles);
+        System.out.printf("Área: %.2f\n", isosceles.getArea());
+        System.out.printf("Perímetro: %.2f\n", isosceles.getPerimetro());
+
+        System.out.println("\nCriando primeiro Triangulo retangulo de lados 3, 4, 5");
+        FiguraGeometrica retangulo = FabricaFiguraGeometrica.getTriangulo(3, 4, 5);
+        System.out.println(retangulo);
+        System.out.printf("Área: %.2f\n", retangulo.getArea());
+        System.out.printf("Perímetro: %.2f\n", retangulo.getPerimetro());
+
+        System.out.println("\nCriando segundo Triangulo retangulo de lados 6, 8, 10");
+        retangulo = FabricaFiguraGeometrica.getTriangulo(6, 8, 10);
+        System.out.println(retangulo);
+        System.out.printf("Área: %.2f\n", retangulo.getArea());
+        System.out.printf("Perímetro: %.2f\n", retangulo.getPerimetro());
 
 
-        System.out.println("\n--------------QUADRADOS--------------");
+        System.out.println("\n---------------QUADRADOS---------------");
 
-        System.out.println("\n" + quadrado1);
-        System.out.printf("Área: %.2f\n", quadrado1.getArea());
-        System.out.printf("Perímetro: %.2f\n", quadrado1.getPerimetro());
+        System.out.println("Criando primeiro Quadrado de lado 4");
+        FiguraGeometrica  quadrado = FabricaFiguraGeometrica.getQuadrado(4);
+        System.out.println(quadrado);
+        System.out.printf("Área: %.2f\n", quadrado.getArea());
+        System.out.printf("Perímetro: %.2f\n", quadrado.getPerimetro());
 
-        System.out.println("\n" + quadrado2);
-        System.out.printf("Área: %.2f\n", quadrado2.getArea());
-        System.out.printf("Perímetro: %.2f\n", quadrado2.getPerimetro());
+        System.out.println("\nCriando segundo Quadrado de lado 5");
+        quadrado = FabricaFiguraGeometrica.getQuadrado(5);
+        System.out.println(quadrado);
+        System.out.printf("Área: %.2f\n", quadrado.getArea());
+        System.out.printf("Perímetro: %.2f\n", quadrado.getPerimetro());
 
-        System.out.println("\n" + quadrado3);
-        System.out.printf("Área: %.2f\n", quadrado3.getArea());
-        System.out.printf("Perímetro: %.2f\n", quadrado3.getPerimetro());
+        System.out.println("\nCriando terceiro Quadrado de lado 8");
+        quadrado = FabricaFiguraGeometrica.getQuadrado(8);
+        System.out.println(quadrado);
+        System.out.printf("Área: %.2f\n", quadrado.getArea());
+        System.out.printf("Perímetro: %.2f\n", quadrado.getPerimetro());
 
-        System.out.println("\n" + quadrado4);
-        System.out.printf("Área: %.2f\n", quadrado4.getArea());
-        System.out.printf("Perímetro: %.2f\n", quadrado4.getPerimetro());
+        System.out.println("\nCriando quarto Quadrado de lado 10");
+        quadrado = FabricaFiguraGeometrica.getQuadrado(10);
+        System.out.println(quadrado);
+        System.out.printf("Área: %.2f\n", quadrado.getArea());
+        System.out.printf("Perímetro: %.2f\n", quadrado.getPerimetro());
     }
 
 }

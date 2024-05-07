@@ -1,6 +1,6 @@
-import controller.FabricaFiguraGeometrica;
+import fabrica.FabricaFiguraGeometrica;
 import exceptions.ExceptionValorNegativoOuZero;
-import models.FiguraGeometrica;
+import formas_geometricas.FiguraGeometrica;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

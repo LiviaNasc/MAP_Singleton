@@ -1,4 +1,4 @@
-package models;
+package formas_geometricas;
 
 public interface FiguraGeometrica {
     public double getArea();

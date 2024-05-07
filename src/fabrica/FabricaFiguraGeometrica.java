@@ -1,9 +1,9 @@
-package controller;
+package fabrica;
 
 import exceptions.ExceptionValorNegativoOuZero;
-import models.Circulo;
-import models.Quadrado;
-import models.Triangulo;
+import formas_geometricas.Circulo;
+import formas_geometricas.Quadrado;
+import formas_geometricas.Triangulo;
 
 public class FabricaFiguraGeometrica {
 
