@@ -16,7 +16,7 @@ public class FabricaFiguraGeometrica {
     }
 
     public static Triangulo getTriangulo(double a, double b, double c) throws ExceptionValorNegativoOuZero {
-        return new Triangulo(a, b, c);
+        return Triangulo.getInstance(a, b, c);
     }
 
 

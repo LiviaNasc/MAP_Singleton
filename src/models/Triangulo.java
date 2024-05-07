@@ -4,15 +4,23 @@ import exceptions.ExceptionValorNegativoOuZero;
 
 public class Triangulo implements FiguraGeometrica {
 
+    private static Triangulo instance = null;
     private double a, b, c;
 
-    public Triangulo(double a, double b, double c) throws ExceptionValorNegativoOuZero {
+    private Triangulo(double a, double b, double c) throws ExceptionValorNegativoOuZero {
         if (a <=0 || b <=0 || c <=0 ) {
             throw new ExceptionValorNegativoOuZero();
         }
         this.a = a;
         this.b = b;
         this.c = c;
+    }
+
+    public static Triangulo getInstance(double a, double b, double c) throws ExceptionValorNegativoOuZero {
+        if (instance == null) {
+            instance = new Triangulo(a, b, c);
+        }
+        return instance;
     }
 
     public double getA() {
