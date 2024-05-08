@@ -1,16 +1,16 @@
 import fabrica.FabricaFiguraGeometrica;
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 import formas_geometricas.FiguraGeometrica;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCirculo{
-    static FiguraGeometrica circulo;
+    private FiguraGeometrica circulo;
 
-    @BeforeAll
-    public static void setUp() throws ExceptionValorNegativoOuZero {
+    @BeforeEach
+    public void setUp() throws ExceptionValorInvalido {
         circulo = FabricaFiguraGeometrica.getCirculo(3);
     }
 

@@ -2,11 +2,11 @@ package main;
 
 import formas_geometricas.FiguraGeometrica;
 import fabrica.FabricaFiguraGeometrica;
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 
 public class Main{
 
-    public static void main(String[] args) throws ExceptionValorNegativoOuZero {
+    public static void main(String[] args) throws ExceptionValorInvalido {
         System.out.println("---------------CÍRCULO---------------");
         System.out.println("Criando primeiro Círculo de raio 5");
         FiguraGeometrica circulo = FabricaFiguraGeometrica.getCirculo(5);

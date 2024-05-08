@@ -1,20 +1,18 @@
 import fabrica.FabricaFiguraGeometrica;
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 import formas_geometricas.FiguraGeometrica;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class TestTriangulo {
-    static FiguraGeometrica triangulo;
+    private FiguraGeometrica triangulo;
 
-
-    @BeforeAll
-    public static void setUp() throws ExceptionValorNegativoOuZero {
+    @BeforeEach
+    public void setUp() throws ExceptionValorInvalido {
         triangulo = FabricaFiguraGeometrica.getTriangulo(3, 4, 5);
     }
-
 
     @Test
     public void testAreaTriangulo() {
@@ -28,46 +26,44 @@ public class TestTriangulo {
     }
 
     @Test
-    public void testTriangulo() throws ExceptionValorNegativoOuZero {
+    public void testTriangulo() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(3, 4, 5));
     }
 
     @Test
-    public void testTriangulo2() throws ExceptionValorNegativoOuZero {
+    public void testTriangulo2() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(5, 5, 5));
     }
 
-    //Testa se o triangulo é equilatero
     @Test
-    public void testTrianguloEquilatero() throws ExceptionValorNegativoOuZero {
+    public void testTrianguloEquilatero() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(10, 10, 10));
     }
 
     @Test
-    public void testTrianguloEquilatero2() throws ExceptionValorNegativoOuZero {
+    public void testTrianguloEquilatero2() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(3, 3, 3));
     }
 
-    //Testa se o triangulo é Isosceles
+
     @Test
-    public void testTrianguloIsosceles1() throws ExceptionValorNegativoOuZero {
+    public void testTrianguloIsosceles1() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(4, 3, 4));
     }
 
     @Test
-    public void testTrianguloIsosceles2() throws ExceptionValorNegativoOuZero {
+    public void testTrianguloIsosceles2() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(10, 10, 6));
 
     }
 
-    //Testa se o triangulo é Retangulo
     @Test
-    public void testTrianguloRetangulo1() throws ExceptionValorNegativoOuZero {
+    public void testTrianguloRetangulo1() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(18, 24, 30));
     }
 
     @Test
-    public void testTrianguloRetangulo2() throws ExceptionValorNegativoOuZero {
+    public void testTrianguloRetangulo2() throws ExceptionValorInvalido {
         assertNotNull(FabricaFiguraGeometrica.getTriangulo(7, 24, 25));
     }
 }

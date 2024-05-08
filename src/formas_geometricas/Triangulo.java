@@ -1,24 +1,24 @@
 package formas_geometricas;
 
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 
 public class Triangulo implements FiguraGeometrica {
 
     private static Triangulo[] instance = {null, null, null};
     private double a, b, c;
 
-    private Triangulo(double a, double b, double c) throws ExceptionValorNegativoOuZero {
+    private Triangulo(double a, double b, double c) throws ExceptionValorInvalido {
         if (a <=0 || b <=0 || c <=0 ) {
-            throw new ExceptionValorNegativoOuZero();
+            throw new ExceptionValorInvalido();
         }
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public static Triangulo getInstance(double a, double b, double c) throws ExceptionValorNegativoOuZero {
+    public static Triangulo getInstance(double a, double b, double c) throws ExceptionValorInvalido {
         if (a <=0 || b <=0 || c <=0 ) {
-            throw new ExceptionValorNegativoOuZero();
+            throw new ExceptionValorInvalido();
         }
         if (!isTriangle(a, b, c)) {
             return null;

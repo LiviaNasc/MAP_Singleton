@@ -1,12 +1,12 @@
 package formas_geometricas;
 
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 
 public class Quadrado implements FiguraGeometrica {
     private double lado;
 
-    public Quadrado(double lado) throws ExceptionValorNegativoOuZero {
-        if (lado <= 0) throw new ExceptionValorNegativoOuZero();
+    public Quadrado(double lado) throws ExceptionValorInvalido {
+        if (lado <= 0) throw new ExceptionValorInvalido();
         this.lado = lado;
     }
 

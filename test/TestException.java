@@ -1,22 +1,23 @@
-import formas_geometricas.FiguraGeometrica;
 import fabrica.FabricaFiguraGeometrica;
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertThrows;
 
 
 public class TestException {
-    static FiguraGeometrica circuloException;
-    static FiguraGeometrica quadradoException;
-    static FiguraGeometrica trianguloException;
-
+    @Test
+    public void testCirculoException() {
+        assertThrows(ExceptionValorInvalido.class, () -> FabricaFiguraGeometrica.getCirculo(-2));
+    }
 
     @Test
-    public void testException(){
-        assertThrows(ExceptionValorNegativoOuZero.class, () -> {
-            circuloException = FabricaFiguraGeometrica.getCirculo(-2);
-            quadradoException = FabricaFiguraGeometrica.getQuadrado(-1);
-            trianguloException = FabricaFiguraGeometrica.getTriangulo(-1, 0, 30);
-        });
+    public void testQuadradoException() {
+        assertThrows(ExceptionValorInvalido.class, () -> FabricaFiguraGeometrica.getQuadrado(-1));
     }
+
+    @Test
+    public void testTrianguloException() {
+        assertThrows(ExceptionValorInvalido.class, () -> FabricaFiguraGeometrica.getTriangulo(-1, 0, 30));
+    }
+
 }

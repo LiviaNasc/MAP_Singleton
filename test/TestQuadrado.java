@@ -1,20 +1,20 @@
 import fabrica.FabricaFiguraGeometrica;
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 import formas_geometricas.FiguraGeometrica;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class TestQuadrado {
-    static FiguraGeometrica quadrado, quadrado2;
+    private FiguraGeometrica quadrado;
+    private FiguraGeometrica quadrado2;
 
-    @BeforeAll
-    public static void setUp() throws ExceptionValorNegativoOuZero {
+    @BeforeEach
+    public void setUp() throws ExceptionValorInvalido {
         quadrado = FabricaFiguraGeometrica.getQuadrado(4);
         quadrado2 = FabricaFiguraGeometrica.getQuadrado(5);
-
     }
 
     // QUADRADO 1

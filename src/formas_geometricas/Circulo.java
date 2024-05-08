@@ -1,19 +1,19 @@
 package formas_geometricas;
 
 
-import exceptions.ExceptionValorNegativoOuZero;
+import exceptions.ExceptionValorInvalido;
 
 public class Circulo implements FiguraGeometrica {
 
     private static Circulo instanceUnica = null;
     private double raio;
 
-    private Circulo(double raio) throws ExceptionValorNegativoOuZero {
-        if (raio <= 0) throw new ExceptionValorNegativoOuZero();
+    private Circulo(double raio) throws ExceptionValorInvalido {
+        if (raio <= 0) throw new ExceptionValorInvalido();
         this.raio = raio;
     }
 
-    public static Circulo getInstance(double raio) throws ExceptionValorNegativoOuZero {
+    public static Circulo getInstance(double raio) throws ExceptionValorInvalido {
         if (instanceUnica == null) {
             instanceUnica = new Circulo(raio);
         }
